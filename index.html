@@ -6,29 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mumuntum</title>
 
+    <!-- 웹 폰트 -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet" />
+
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="js-clock">
-      <h1 class="js-title">00:00</h1>
-    </div>
-    <!-- //js-clock -->
+    <div id="backdrop"></div>
 
-    <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <!-- //js-form -->
+    <header id="header">
+      <div class="header">
+        <span class="weather"></span>
+        <!-- //weather -->
+      </div>
+    </header>
+    <!-- //header -->
 
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
-    <ul class="js-toDoList"></ul>
-    <!-- //js-toDoForm -->
+    <main id="main">
+      <section id="clock">
+        <div class="clock">
+          <em>00:00</em>
+        </div>
+      </section>
+      <!-- //clock -->
 
-    <span class="js-weather"></span>
-    <!-- //js-weather -->
+      <section id="greeting">
+        <div class="greeting">
+          <form>
+            <input type="text" placeholder="What is your name?" />
+          </form>
+          <em>Hello, <strong>username</strong></em>
+        </div>
+      </section>
+      <!-- //greeting -->
+
+      <section id="todo">
+        <div class="todo">
+          <form>
+            <input type="text" placeholder="Write a to do" />
+          </form>
+          <ul></ul>
+        </div>
+      </section>
+      <!-- //todo -->
+    </main>
+    <!-- //main -->
 
     <!-- script -->
     <script src="assets/js/clock.js"></script>

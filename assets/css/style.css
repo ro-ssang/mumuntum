@@ -1,19 +1,28 @@
-body {
-  background-color: #34495e;
-  color: #fff;
+/* layouts */
+#backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -10;
 }
-
-.form {
-  display: none;
+#header {
+  height: 10vh;
 }
-.form.showing {
-  display: block;
+#main {
+  padding: 0 3vw;
+  height: 90vh;
+  /* background-color: #444; */
 }
-.greetings {
-  display: none;
+#clock {
+  /* background-color: #333; */
 }
-.greetings.showing {
-  display: block;
+#greeting {
+}
+#todo {
+  /* background-color: #555; */
 }
 
 /* background image */
@@ -23,15 +32,103 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  animation: fadeIn 0.5s ease-in;
-  z-index: -10;
+  z-index: -20;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* header */
+.header {
+  padding: 2vw 3vw 0 3vw;
+  text-align: right;
+}
+.header span {
+  font-size: 1.7vw;
+}
+
+/* clock */
+.clock {
+  text-align: center;
+}
+.clock em {
+  font-size: 10vw;
+  font-family: 'Kanit', sans-serif;
+}
+
+/* greeting */
+.greeting {
+  text-align: center;
+}
+.greeting form {
+  display: none;
+}
+.greeting form.showing {
+  display: block;
+}
+.greeting input {
+  padding: 1vw 0;
+  background: transparent;
+  /* background: #222; */
+  border-bottom: 1px solid #ecf0f1;
+  font-size: 4vw;
+  text-align: center;
+}
+.greeting input::placeholder {
+  color: #ecf0f1;
+}
+.greeting em.showing {
+  display: inline-block;
+}
+.greeting em {
+  display: none;
+  font-size: 4vw;
+  font-family: 'Bad Script', cursive;
+}
+.greeting em strong {
+  position: relative;
+}
+.greeting em strong::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 2.3vw;
+  width: 100%;
+  height: 0.5vw;
+  background: #6ab04c;
+  z-index: -1;
+}
+
+/* todo */
+.todo {
+  text-align: center;
+}
+.todo input {
+  padding: 1vw 0;
+  background: transparent;
+  /* background: #222; */
+  border-bottom: 1px solid #c1c2c4;
+  font-size: 3vw;
+  text-align: center;
+}
+.todo input::placeholder {
+  color: #c1c2c4;
+}
+.todo ul {
+  overflow-y: auto;
+  margin-top: 1.6vw;
+}
+.todo li {
+  margin-bottom: 1vw;
+}
+.todo li span {
+  margin-right: 1vw;
+  font-size: 1.6vw;
+}
+.todo li button {
+  padding: 0.3vw 1vw;
+  background-color: transparent;
+  color: #f1302d;
+  font-size: 1.4vw;
+  cursor: pointer;
+}
+.todo li button:hover {
+  color: #c72d2b;
 }

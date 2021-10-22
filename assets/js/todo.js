@@ -1,13 +1,14 @@
-const toDoForm = document.querySelector('.js-toDoForm');
+const toDoElem = document.querySelector('.todo');
+const toDoForm = toDoElem.querySelector('form');
 const toDoInput = toDoForm.querySelector('input');
-const toDoList = document.querySelector('.js-toDoList');
+const toDoList = toDoElem.querySelector('ul');
 
 const TODOS_LS = 'toDos';
 
 let toDos = [];
 
 function deleteToDo(event) {
-  const btn = event.target;
+  const btn = event.currentTarget;
   const li = btn.parentNode;
   toDoList.removeChild(li);
   const cleanToDos = toDos.filter(function (toDo) {
@@ -27,7 +28,7 @@ function paintToDo(text) {
   const span = document.createElement('span');
   const newId = toDos.length + 1;
   delBtn.addEventListener('click', deleteToDo);
-  delBtn.innerText = '❌';
+  delBtn.innerHTML = '<i class="fas fa-times"></i>';
   span.innerText = text;
   li.id = newId;
   li.appendChild(span);
